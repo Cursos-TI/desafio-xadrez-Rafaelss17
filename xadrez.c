@@ -1,32 +1,61 @@
 #include <stdio.h>
 
-// Desafio de Xadrez - MateCheck
-// Este código inicial serve como base para o desenvolvimento do sistema de movimentação das peças de xadrez.
-// O objetivo é utilizar estruturas de repetição e funções para determinar os limites de movimentação dentro do jogo.
+// Definição de constantes para os movimentos das peças
+#define MOVIMENTO_BISPO 5
+#define MOVIMENTO_TORRE 5
+#define MOVIMENTO_RAINHA 8
 
 int main() {
-    // Nível Novato - Movimentação das Peças
-    // Sugestão: Declare variáveis constantes para representar o número de casas que cada peça pode se mover.
+    // Bloco de código para avaliação de limites com loops
 
-    // Implementação de Movimentação do Bispo
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação do Bispo em diagonal.
+    printf("=========================================\n");
+    printf("     Desafio de Xadrez - MateCheck\n");
+    printf("=========================================\n");
+    printf("     Avaliação de Limites com Loops\n");
+    printf("=========================================\n\n");
 
-    // Implementação de Movimentação da Torre
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Torre para a direita.
+    // Entrada de dados (definidos diretamente nas variáveis)
+    const int limite_bispo = MOVIMENTO_BISPO;
+    const int limite_torre = MOVIMENTO_TORRE;
+    const int limite_rainha = MOVIMENTO_RAINHA;
 
-    // Implementação de Movimentação da Rainha
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Rainha para a esquerda.
+    printf("--- Teste de Movimentação do Bispo ---\n");
+    printf("Limite de movimento do Bispo definido para: %d casas na diagonal.\n", limite_bispo);
+    printf("Simulando movimentação:\n");
 
-    // Nível Aventureiro - Movimentação do Cavalo
-    // Sugestão: Utilize loops aninhados para simular a movimentação do Cavalo em L.
-    // Um loop pode representar a movimentação horizontal e outro vertical.
+    // Utilizando a estrutura de repetição 'while' para o Bispo
+    int casas_movidas_bispo = 0;
+    while (casas_movidas_bispo < limite_bispo) {
+        printf("Diagonal Superior Direita\n");
+        casas_movidas_bispo++;
+    }
+    printf("O Bispo tentou mover-se por %d casas na diagonal superior direita.\n\n", casas_movidas_bispo);
 
-    // Nível Mestre - Funções Recursivas e Loops Aninhados
-    // Sugestão: Substitua as movimentações das peças por funções recursivas.
-    // Exemplo: Crie uma função recursiva para o movimento do Bispo.
+    printf("--- Teste de Movimentação da Torre ---\n");
+    printf("Limite de movimento da Torre definido para: %d casas para a direita.\n", limite_torre);
+    printf("Simulando movimentação:\n");
 
-    // Sugestão: Implemente a movimentação do Cavalo utilizando loops com variáveis múltiplas e condições avançadas.
-    // Inclua o uso de continue e break dentro dos loops.
+    // Utilizando a estrutura de repetição 'for' para a Torre
+    for (int casas_movidas_torre = 0; casas_movidas_torre < limite_torre; casas_movidas_torre++) {
+        printf("Direita\n");
+    }
+    printf("A Torre tentou mover-se por %d casas para a direita.\n\n", casas_movidas_torre);
+
+    printf("--- Teste de Movimentação da Rainha ---\n");
+    printf("Limite de movimento da Rainha definido para: %d casas para a esquerda.\n", limite_rainha);
+    printf("Simulando movimentação:\n");
+
+    // Utilizando a estrutura de repetição 'do-while' para a Rainha
+    int casas_movidas_rainha = 0;
+    do {
+        printf("Esquerda\n");
+        casas_movidas_rainha++;
+    } while (casas_movidas_rainha < limite_rainha);
+    printf("A Rainha tentou mover-se por %d casas para a esquerda.\n\n", casas_movidas_rainha);
+
+    printf("=========================================\n");
+    printf("     Fim da Avaliação de Limites\n");
+    printf("=========================================\n");
 
     return 0;
 }
